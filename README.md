@@ -15,4 +15,6 @@
 
 - Windows 用户把 chromedriver 放到同目录，Linux 则放到可执行文件的 $PATH 下
 
+- 修改 xbjfu.py 中的用户密码，设置为自己在 cas.bjfu.edu.cn 的用户密码
+
 - 执行
