@@ -42,12 +42,14 @@ else:
 
 # 提交
 try:
-    element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="body_0"]/div[1]/div[2]/div[4]/span')))
+    element = WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH, '//*[@id="layui-layer1"]/div')))
+    time.sleep(5)
 except TimeoutException:
+    print("TimeoutException")
     driver.quit()
 except UnexpectedAlertPresentException:
+    print("UnexpectedAlertPresentException")
     driver.quit()
 else:
     driver.find_element(by="xpath", value='//*[@id="commit"]').click()
-    time.sleep(2)
     driver.quit()
